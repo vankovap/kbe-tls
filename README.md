@@ -23,6 +23,8 @@ Implemented in `rsa.py` with tests in `rsa_test.py`.
 ## Task 7:  RSA broadcast attack
 Implemented in `rsa.py` as well, tests also in `rsa_test.py`. Files `test_message` and `message_captured` used in the tests. 
 
+The message is `Even experts make mistakes. Crypto is extremely difficult to get right`.
+
 How Chinese remainder theorem is helping you here?
 
 * this attack is based on the usage of small `e` and the fact that when an eavesdropper is able to capture at least three cipher texts of the same message `m`, they are able to "decrypt" it with CRT
