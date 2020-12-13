@@ -3,6 +3,7 @@ import helpers as fn
 BLOCK_SIZE = 16
 
 
+# add PKCS#1 padding
 def pad(x):
     if type(x) is str:
         data_bin = fn.txt2bin(x)
@@ -15,6 +16,7 @@ def pad(x):
     return data_bin
 
 
+# remove PKCS#1 padding
 def unpad(y):
     pad_length = y[-1]
     return y[:-pad_length]

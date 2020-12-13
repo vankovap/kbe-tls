@@ -1,3 +1,5 @@
+# the exchange itself is in the Agent class, these are only basic calculations
+
 def public_key(secret, modulus, base):
     key = base ** secret % modulus
     return key

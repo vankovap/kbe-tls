@@ -3,6 +3,7 @@ import helpers as fn
 import json
 
 
+# Extended Euclidean algorithm, return gcs and coefficients
 def ext_eucl(a, b):
     swapped = False
     if b > a:
@@ -30,6 +31,7 @@ def read_file(file):
 
 
 # this function is inspired by a code I found, but I totally forgot where
+# compute cubic root of a big int
 def cube_root(x):
     upper = 1
     while upper ** 3 <= x:
@@ -56,6 +58,7 @@ class RSA:
         self.fi_n = abs((self.p - 1) * (self.q - 1))
         self.d = self.invmod(self.e, self.fi_n)
 
+    # compute multiplicative inverse module
     def invmod(self, a, m):
         if math.gcd(a, m) != 1:
             return None
@@ -90,6 +93,7 @@ class SimpleHastadAttack:
             self.messages.append(msg)
             index += 1
 
+    # get the plaintext message with CRT
     def get_message(self):
         ciphertext = 1
         mod = 1

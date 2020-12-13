@@ -1,6 +1,6 @@
 from Cryptodome.Hash import SHA1
 
-
+# calculate the key to be used in AES
 def secret_to_128key(key):
     h = SHA1.new()
     h.update(key)
